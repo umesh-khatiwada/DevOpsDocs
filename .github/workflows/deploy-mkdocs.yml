@@ -23,9 +23,15 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
+      - name: Install system packages (needed to build lxml)
         run: |
-          python -m pip install --upgrade pip
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            libxml2-dev libxslt1-dev zlib1g-dev build-essential python3-dev
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
           pip install -r requirements.txt
 
       - name: Build MkDocs site
@@ -35,6 +41,8 @@ jobs:
       - name: Deploy to `gp-page` branch
         uses: peaceiris/actions-gh-pages@v3
         with:
+          # Use a repository secret containing a personal access token (PAT).
+          # Set this secret in your repository settings (e.g. name it `GH_SECRET`).
           github_token: ${{ secrets.GH_SECRET }}
           publish_dir: ./site
           publish_branch: gp-page
