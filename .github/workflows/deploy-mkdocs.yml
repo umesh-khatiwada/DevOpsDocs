@@ -35,7 +35,7 @@ jobs:
       - name: Deploy to `gp-page` branch
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_SECRET }}
           publish_dir: ./site
           publish_branch: gp-page
           commit_message: 'Deploy MkDocs site to gp-page (GitHub Action)'
