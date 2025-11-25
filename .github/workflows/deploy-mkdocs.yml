@@ -44,12 +44,12 @@ jobs:
         run: |
           mkdocs build --clean
 
-      - name: Deploy to `gp-page` branch
+      - name: Deploy to `gh-page` branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           # Use the built-in GitHub Actions token provided to runners.
           # Ensure repository Actions permissions are set to "Read and write" so this token can push.
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
-          publish_branch: gp-page
-          commit_message: 'Deploy MkDocs site to gp-page (GitHub Action)'
+          publish_branch: gh-page
+          commit_message: 'Deploy MkDocs site to gh-page (GitHub Action)'
