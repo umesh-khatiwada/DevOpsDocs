@@ -1,0 +1,108 @@
+site_name: DevOps-Documentation
+site_author: Umesh Khatiwada
+site_description: A collection of DevOps documentation and tutorials by Umesh Khatiwada.
+site_url: https://blog.umeshkhatiwada.com.np
+ 
+nav:
+  - Home: 
+    - index.md
+    - Monitoring: Monitoring/1. setup_prometheus-grafana.md 
+    - Logging: Logging/kafka.md
+    - Security:  Security/KubeScape.md
+    - Troubleshoots: Troubleshoots/How to rotate and renew expired Contou.md
+    - Traefik: Traefik/Traefik.md
+    - MultiCluster: MultiCluster/Karmada.md
+    - Backup&Restore: Backup&Restore/kasten.md
+  - Monitoring: 
+    - Monitoring/1. setup_prometheus-grafana.md
+    - Monitoring/2. gmail_integration.md
+    - Monitoring/3. slack_integration.md
+  - Logging: 
+    - Logging/kafka.md
+    - Logging/loki.md
+  - Security:  
+    - Security/KubeScape.md
+    - Security/M9Sweeper.md  
+  - Troubleshoots:
+    - Troubleshoots/How to rotate and renew expired Contou.md
+  - Traefik:
+    - Traefik/Traefik.md
+  - MultiCluster:
+    - MultiCluster/Karmada.md
+  - Backup&Restore:
+    - Backup&Restore/kasten.md
+# Configuration
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.tooltips
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: lime
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    logo: material/book-open-page-variant
+  favicon: assets/favicon.png
+  language: en
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/umesh-khatiwada
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/umesh-khatiwada/
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed
+  - pymdownx.tilde
+
+# Plugins
+plugins:
+  - search
+  - minify:
+      minify_html: true
