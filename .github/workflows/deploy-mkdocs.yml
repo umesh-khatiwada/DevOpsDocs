@@ -45,7 +45,7 @@ jobs:
         with:
           # Use a repository secret containing a personal access token (PAT).
           # Set this secret in your repository settings (e.g. name it `GH_SECRET`).
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_SECRET }}
           publish_dir: ./site
           publish_branch: gp-page
           commit_message: 'Deploy MkDocs site to gp-page (GitHub Action)'
