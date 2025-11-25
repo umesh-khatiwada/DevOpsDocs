@@ -49,14 +49,14 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: teal
+      primary: blue
       accent: lime
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: teal
+      primary: blue
       accent: purple
       toggle:
         icon: material/weather-night
@@ -68,6 +68,8 @@ theme:
     logo: material/book-open-page-variant
   favicon: assets/favicon.png
   language: en
+  extra_css:
+    - assets/stylesheets/custom.css
 
 # Customization
 extra:
