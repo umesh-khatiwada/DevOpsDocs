@@ -1,7 +1,7 @@
 ---
 # DevOps Documentation
 
-<div class="hero" role="region" aria-label="DevOps Documentation hero">
+<div class="hero" role="region" aria-label="Site Introduction">
 	<div class="hero-content">
 		<h1 class="hero-title">DevOps Documentation</h1>
 		<p class="lead">A curated collection of guides, tutorials, and best practices to help you build, operate, and secure production-grade DevOps systems.</p>
