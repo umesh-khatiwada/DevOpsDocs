@@ -13,6 +13,10 @@ nav:
     - Traefik: Traefik/Traefik.md
     - MultiCluster: MultiCluster/Karmada.md
     - Backup&Restore: Backup&Restore/kasten.md
+  - Assets:
+    - Docker Image Security: assets/Docker-Image-Security.md
+    - KEDA: assets/keda.md
+    - Keycloak & Kong: assets/keycloak-kong.md
   - Monitoring: 
     - Monitoring/1. setup_prometheus-grafana.md
     - Monitoring/2. gmail_integration.md
