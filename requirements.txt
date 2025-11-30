@@ -34,3 +34,9 @@ soupsieve==2.4.1
 urllib3==2.0.4
 watchdog==3.0.0
 mkdocs-minify-plugin
+mkdocs-awesome-pages-plugin
+mkdocs-redirects
+mkdocs-git-revision-date-localized-plugin
+mkdocs-rss-plugin
+mkdocs-macros-plugin
+ 

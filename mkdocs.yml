@@ -40,10 +40,17 @@ nav:
     - AgenticAI/agent-gateway.md
     - AgenticAI/cai-cybersecurity-agent.md
     - AgenticAI/introduction-to-mcp.md
+  - About:
+    - about.md
     
 # Configuration
 theme:
   name: material
+  logo: assets/images/logo.png
+  favicon: assets/favicon.png
+  repo_url: https://github.com/umesh-khatiwada/DevOpsDocs
+  repo_name: GitHub
+  edit_uri: edit/main/docs/
   features:
     - navigation.tabs
     - navigation.sections
@@ -76,10 +83,12 @@ theme:
     code: Roboto Mono
   icon:
     logo: material/book-open-page-variant
-  favicon: assets/favicon.png
-  language: en
   extra_css:
     - assets/stylesheets/custom.css
+  extra_javascript:
+    - assets/javascripts/custom.js
+    - https://unpkg.com/mermaid@9/dist/mermaid.min.js
+  language: en
 
 # Customization
 extra:
@@ -88,6 +97,14 @@ extra:
       link: https://github.com/umesh-khatiwada
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/umesh-khatiwada/
+  # Social preview/meta for sharing
+  social_image: assets/images/social-preview.png
+  description: "DevOps guides, tutorials, and secure practices for production systems."
+  copyright: "© 2025 Umesh Khatiwada"
+
+# HTML meta tags and open graph (Material uses extra to inject into templates)
+extra_templates:
+  - overrides/partials/extra-meta.html
 
 # Extensions
 markdown_extensions:
@@ -118,3 +135,8 @@ plugins:
   - search
   - minify:
       minify_html: true
+  - redirects
+  - awesome-pages
+  - git-revision-date-localized
+  - rss
+  - macros
