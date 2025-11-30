@@ -35,6 +35,8 @@ nav:
     - MultiCluster/Karmada.md
   - Backup&Restore:
     - Backup&Restore/kasten.md
+  - AgenticAI:
+    - AgenticAI/agentic-ai.md
 # Configuration
 theme:
   name: material

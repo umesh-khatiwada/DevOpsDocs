@@ -1,7 +1,7 @@
 ---
 # DevOps Documentation
 
-<div class="hero" role="region" aria-label="Site Introduction">
+<div class="hero" role="region" aria-label="DevOps Documentation Introduction">
 	<div class="hero-content">
 		<h1 class="hero-title">DevOps Documentation</h1>
 		<p class="lead">A curated collection of guides, tutorials, and best practices to help you build, operate, and secure production-grade DevOps systems.</p>
@@ -37,6 +37,7 @@ Click a card to open the full guide.
 	<div class="feature-card"><strong><a href="Traefik/Traefik.md">Traefik</a></strong><p>Ingress, routing and middleware examples.</p></div>
 	<div class="feature-card"><strong><a href="MultiCluster/Karmada.md">MultiCluster</a></strong><p>Multi-cluster orchestration and policies.</p></div>
 	<div class="feature-card"><strong><a href="Backup&Restore/kasten.md">Backup & Restore</a></strong><p>Kasten workflows and restore procedures.</p></div>
+	<div class="feature-card"><strong><a href="AgenticAI/agentic-ai.md">Agentic AI</a></strong><p>Autonomous AI systems and their applications.</p></div>
 </div>
 
 ---
