@@ -1,1 +1,3 @@
 # Introduction to MCP
+![](./../assets/images/Agentic/MCP-Introduction.png)
+MCP (Multi-Cloud Platform) is a comprehensive solution designed to facilitate the deployment, management, and orchestration of applications across multiple cloud environments. It provides a unified interface and set of tools that enable organizations to leverage the strengths of different cloud providers while maintaining control and consistency in their operations. MCP typically includes features such as automated provisioning, workload balancing, security management, and monitoring across various cloud platforms. By utilizing MCP, businesses can optimize their cloud strategies, enhance scalability, and improve resilience against outages or disruptions in any single cloud environment.
