@@ -37,6 +37,10 @@ nav:
     - Backup&Restore/kasten.md
   - AgenticAI:
     - AgenticAI/agentic-ai.md
+    - AgenticAI/agent-gateway.md
+    - AgenticAI/cai-cybersecurity-agent.md
+    - AgenticAI/introduction-to-mcp.md
+    
 # Configuration
 theme:
   name: material
