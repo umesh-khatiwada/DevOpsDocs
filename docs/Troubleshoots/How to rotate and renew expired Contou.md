@@ -5,7 +5,7 @@
 #### Symptoms:
 * > Envoy (pods with name starting with "projectcontour-envoy-") pods under projectcontour namespace show restarts.
 
-#### Example
+#### Example 1
     
     kubectl get pods -n proejctcontour
 
@@ -19,7 +19,7 @@
 
 * >    The secrets (contourcert and envoycert) in projectcontour namespace are expired.
 
-#### Example 
+#### Example  2
 
     kubectl  get secret -n projectcontour envoycert -o jsonpath='{.data.ca\.crt}' | base64 -d | openssl x509 -noout -dates
     notBefore=Jul 24 19:11:31 2023 GMT
