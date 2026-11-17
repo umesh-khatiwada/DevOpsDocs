@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{#- Display + handwritten faces from umeshkhatiwada.com.np (body/code come from theme.font) -#}
+{% block fonts %}
+  {{ super() }}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,200..600&family=Caveat:wght@500..700&display=swap">
+{% endblock %}
+
+{% block extrahead %}
+  {%- set title = (page.meta.title or page.title) ~ " · " ~ config.site_name if page and page.title and not page.is_homepage else config.site_name -%}
+  {%- set description = (page.meta.description if page and page.meta and page.meta.description) or config.site_description -%}
+  <meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="{{ 'website' if page and page.is_homepage else 'article' }}">
+  <meta property="og:site_name" content="{{ config.site_name }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  {% if page and page.canonical_url %}<meta property="og:url" content="{{ page.canonical_url }}">{% endif %}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@The_khatiwada">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+{% endblock %}

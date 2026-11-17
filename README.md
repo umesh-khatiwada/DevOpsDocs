@@ -60,8 +60,12 @@ A one-stop hub for all your DevOps documentation needs, containing helpful guide
 - If MkDocs reports missing images or unrecognized relative links, check that image paths under `docs/` point to existing files in `docs/assets/images/` (or correct the references).
 - The project uses `mkdocs-material` theme; refer to `mkdocs.yml` for theme and plugin configuration.
 
-If you'd like, I can also:
-- Add the currently-unused `docs/assets/*.md` files into the `nav` in `mkdocs.yml`.
-- Serve the site locally now for review.
-- Publish the built `site/` to GitHub Pages.
+## Theme
 
+The look matches [umeshkhatiwada.com.np](https://umeshkhatiwada.com.np): paper and coal neutrals, a clay accent, Fraunces headings, DM Sans body text and Caveat accents.
+
+- `docs/assets/stylesheets/custom.css` holds the brand tokens (`--uk-*`), the light and dark palettes, and the home page components (`uk-card`, `uk-row`, `uk-cta`).
+- `overrides/main.html` loads the display fonts and adds social meta tags.
+- `overrides/partials/logo.html` renders the "Umesh. *the blog*" wordmark.
+- Buttons in Markdown: `[Text](url){ .md-button .md-button--primary }`.
+- Each page can set `description:` in its front matter for search and social previews.

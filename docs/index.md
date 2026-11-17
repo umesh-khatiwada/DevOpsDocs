@@ -1,89 +1,127 @@
 ---
-# DevOps Documentation
+title: Home
+description: Field-tested DevOps, platform engineering and AI automation guides by Umesh Khatiwada.
+hide:
+  - navigation
+  - toc
+---
 
-<div class="hero" role="region" aria-label="DevOps Documentation Introduction">
-	<div class="hero-content">
-		<h1 class="hero-title">DevOps Documentation</h1>
-		<p class="lead">A curated collection of guides, tutorials, and best practices to help you build, operate, and secure production-grade DevOps systems.</p>
-	</div>
-	<div class="hero-actions">
-		<button id="theme-toggle" class="btn-toggle" aria-pressed="false" title="Toggle theme">🌙</button>
-	</div>
+<div class="uk-hero" markdown>
+<span class="uk-hello">namaste! welcome to the notes</span>
+
+<h1 class="uk-display">Guides for platforms that <span class="uk-mark">ship themselves.<svg aria-hidden="true" viewBox="0 0 300 24" preserveAspectRatio="none"><path d="M4 16 C 60 6, 120 4, 180 10 S 270 18, 296 8" fill="none" stroke-width="9" stroke-linecap="round"/></svg></span></h1>
+
+<p class="uk-lead">Hands-on write-ups from running Kubernetes in production: monitoring, logging, security, autoscaling, multi-cluster, backups, and AI agents. Every guide is copy-paste friendly and tested on real clusters.</p>
+
+<div class="uk-actions" markdown>
+[Browse the guides](#guides){ .md-button .md-button--primary }
+[About me ↗](https://umeshkhatiwada.com.np){ .md-button }
+</div>
 </div>
 
-**Overview**
-
-This documentation repository is organized by topic to help you quickly find practical guides and reference material for operating cloud-native systems.
-
-**Contents snapshot**
-
-- Monitoring: Prometheus, Grafana, alerting and integrations.
-- Logging: Kafka, Loki, collection patterns and observability.
-- Security: Scanning, hardening and tools like KubeScape and M9Sweeper.
-- Traefik: Ingress examples, dashboards and routing patterns.
-- Backup & Restore: Kasten examples and recovery strategies.
-- Multi-cluster: Karmada and cross-cluster orchestration.
-
----
-
-## Quick links
-
-Click a card to open the full guide.
-
-<div class="feature-cards">
-	<div class="feature-card"><strong><a href="Monitoring/1.%20setup_prometheus-grafana.md">Monitoring</a></strong><p>Prometheus & Grafana, integrations and alerts.</p></div>
-	<div class="feature-card"><strong><a href="Logging/kafka.md">Logging</a></strong><p>Kafka, Loki and log collection patterns.</p></div>
-	<div class="feature-card"><strong><a href="Security/KubeScape.md">Security</a></strong><p>Cluster scanning and remediation tools.</p></div>
-	<div class="feature-card"><strong><a href="Traefik/Traefik.md">Traefik</a></strong><p>Ingress, routing and middleware examples.</p></div>
-	<div class="feature-card"><strong><a href="MultiCluster/Karmada.md">MultiCluster</a></strong><p>Multi-cluster orchestration and policies.</p></div>
-	<div class="feature-card"><strong><a href="Backup&Restore/kasten.md">Backup & Restore</a></strong><p>Kasten workflows and restore procedures.</p></div>
-	<div class="feature-card"><strong><a href="AgenticAI/agentic-ai.md">Agentic AI</a></strong><p>Autonomous AI systems and their applications.</p></div>
+<div class="uk-section-head" markdown>
+<h2 id="guides">The guides</h2>
+<p>Pick a topic. Each one starts from zero and ends with something running.</p>
 </div>
 
----
+<div class="uk-grid" markdown>
 
-## Getting started
+<div class="uk-card" markdown>
+<span class="uk-card__num">01</span>
 
-1. Browse the quick links above to find a topic.
-2. Use the search in the site header to locate keywords across guides.
-3. Open examples and copy snippets into your environment.
+### [Monitoring](<Monitoring/1. setup_prometheus-grafana.md>)
 
-## Contribute
+Prometheus and Grafana on Kubernetes, with Alertmanager routing to Google Chat and Slack.
 
-Contributions are welcome — open a PR with improvements, fixes, or screenshots. Add guides under the matching category folder (`Monitoring/`, `Logging/`, `Security/`, etc.).
+<span class="uk-tags">Prometheus · Grafana · Alertmanager</span>
+</div>
 
-## Contact
+<div class="uk-card" markdown>
+<span class="uk-card__num">02</span>
 
-For help or questions, open an issue in this repository or reach out to the documentation maintainers.
+### [Logging](Logging/kafka.md)
 
-<script>
-// Theme toggle: adds `data-theme="dark"` on the document element and persists choice.
-(function(){
-	const btn = document.getElementById('theme-toggle');
-	if(!btn) return;
-	const root = document.documentElement;
-	const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-	const saved = localStorage.getItem('site-theme');
-	if(saved) root.setAttribute('data-theme', saved);
-	else if(prefersDark) root.setAttribute('data-theme','dark');
+Event streaming with Apache Kafka: brokers, topics and getting logs flowing.
 
-	function update() {
-		const isDark = root.getAttribute('data-theme') === 'dark';
-		btn.textContent = isDark ? '☀️ Light' : '🌙 Dark';
-		btn.setAttribute('aria-pressed', String(isDark));
-	}
+<span class="uk-tags">Kafka · Streaming</span>
+</div>
 
-	btn.addEventListener('click', function(){
-		const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-		root.setAttribute('data-theme', next);
-		localStorage.setItem('site-theme', next);
-		update();
-	});
+<div class="uk-card" markdown>
+<span class="uk-card__num">03</span>
 
-	update();
-})();
-</script>
+### [Security](Security/KubeScape.md)
 
----
+Scan clusters for misconfigurations, then sign and verify every image before it runs.
 
-If you'd like screenshots, badges, or a different landing layout, tell me which sections to prioritize.
+<span class="uk-tags">Kubescape · M9Sweeper · Cosign · Kyverno</span>
+</div>
+
+<div class="uk-card" markdown>
+<span class="uk-card__num">04</span>
+
+### [Platform](Platform/keda.md)
+
+Event-driven autoscaling, ingress routing and fixes for the certificates that expire at 3 a.m.
+
+<span class="uk-tags">KEDA · Traefik · Contour</span>
+</div>
+
+<div class="uk-card" markdown>
+<span class="uk-card__num">05</span>
+
+### [Multi-cluster & DR](MultiCluster/Karmada.md)
+
+Spread workloads across clusters with Karmada and back them up with Kasten K10.
+
+<span class="uk-tags">Karmada · Kasten K10</span>
+</div>
+
+<div class="uk-card" markdown>
+<span class="uk-card__num">06</span>
+
+### [Agentic AI](AgenticAI/agentic-ai.md)
+
+AI agents that work alongside ops: the Model Context Protocol, and security agents.
+
+<span class="uk-tags">MCP · AI agents · CAI</span>
+</div>
+
+</div>
+
+<div class="uk-section-head" markdown>
+<h2 id="how-to-read">The short version</h2>
+</div>
+
+<div class="uk-rows" markdown>
+<div class="uk-row" markdown>
+<span class="uk-eyebrow">Find</span>
+
+Press <kbd>/</kbd> or <kbd>S</kbd> to search every guide, command and YAML snippet.
+</div>
+
+<div class="uk-row" markdown>
+<span class="uk-eyebrow">Copy</span>
+
+Every code block has a copy button. Values like namespaces and hostnames are examples, so change them to match your cluster.
+</div>
+
+<div class="uk-row" markdown>
+<span class="uk-eyebrow">Improve</span>
+
+Spotted a mistake? Use the pencil icon on any page to suggest an edit on [GitHub](https://github.com/umesh-khatiwada/DevOpsDocs).
+</div>
+
+</div>
+
+<div class="uk-cta" markdown>
+<span class="uk-eyebrow">Work together</span>
+
+<h2 id="hire">Need a hand with your platform?</h2>
+
+<p>I help teams move to Kubernetes, build GitOps pipelines and add AI automation that watches production for them.</p>
+
+<div class="uk-actions" markdown>
+[Start a project](https://umeshkhatiwada.com.np/hire){ .md-button .md-button--primary }
+[Email me](mailto:contact.khatiwada@gmail.com){ .md-button }
+</div>
+</div>
