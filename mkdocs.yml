@@ -1,117 +1,119 @@
-site_name: Blog - Umesh Khatiwada
+site_name: Umesh Khatiwada · Blog
 site_author: Umesh Khatiwada
-site_description: A collection of DevOps documentation and tutorials by Umesh Khatiwada.
+site_description: Field-tested DevOps, platform engineering and AI automation guides by Umesh Khatiwada.
 site_url: https://blog.umeshkhatiwada.com.np
- 
+
+repo_url: https://github.com/umesh-khatiwada/DevOpsDocs
+repo_name: umesh-khatiwada/DevOpsDocs
+edit_uri: edit/main/docs/
+
+copyright: >
+  © 2026 <a href="https://umeshkhatiwada.com.np">Umesh Khatiwada</a> ·
+  DevOps, Platform &amp; AI Automation Engineer in Kathmandu, Nepal
+
 nav:
-  - Home: 
-    - index.md
-    - Monitoring: Monitoring/1. setup_prometheus-grafana.md 
-    - Logging: Logging/kafka.md
-    - Security:  Security/KubeScape.md
-    - Troubleshoots: Troubleshoots/How to rotate and renew expired Contou.md
+  - Home: index.md
+  - Monitoring:
+    - Prometheus & Grafana: Monitoring/1. setup_prometheus-grafana.md
+    - Google Chat alerts: Monitoring/2. gmail_integration.md
+    - Slack alerts: Monitoring/3. slack_integration.md
+  - Logging:
+    - Kafka: Logging/kafka.md
+  - Security:
+    - Kubescape: Security/KubeScape.md
+    - M9Sweeper: Security/M9Sweeper.md
+    - Signed images (Kaniko, Cosign, Kyverno): Platform/docker-image-security.md
+  - Platform:
+    - KEDA autoscaling: Platform/keda.md
     - Traefik: Traefik/Traefik.md
-    - MultiCluster: MultiCluster/Karmada.md
-    - Backup&Restore: Backup&Restore/kasten.md
-  - Assets:
-    - Docker Image Security: assets/Docker-Image-Security.md
-    - KEDA: assets/keda.md
-    - Keycloak & Kong: assets/keycloak-kong.md
-  - Monitoring: 
-    - Monitoring/1. setup_prometheus-grafana.md
-    - Monitoring/2. gmail_integration.md
-    - Monitoring/3. slack_integration.md
-  - Logging: 
-    - Logging/kafka.md
-    - Logging/loki.md
-  - Security:  
-    - Security/KubeScape.md
-    - Security/M9Sweeper.md  
-  - Troubleshoots:
-    - Troubleshoots/How to rotate and renew expired Contou.md
-  - Traefik:
-    - Traefik/Traefik.md
-  - MultiCluster:
-    - MultiCluster/Karmada.md
-  - Backup&Restore:
-    - Backup&Restore/kasten.md
-  - AgenticAI:
-    - AgenticAI/agentic-ai.md
-    - AgenticAI/agent-gateway.md
-    - AgenticAI/cai-cybersecurity-agent.md
-    - AgenticAI/introduction-to-mcp.md
-  - About:
-    - about.md
-    
-# Configuration
+    - Karmada multi-cluster: MultiCluster/Karmada.md
+    - Kasten backup & restore: Backup&Restore/kasten.md
+    - "Fix: expired Contour certs": Troubleshoots/How to rotate and renew expired Contou.md
+  - Agentic AI:
+    - Agentic AI: AgenticAI/agentic-ai.md
+    - Introduction to MCP: AgenticAI/introduction-to-mcp.md
+    - CAI cybersecurity agent: AgenticAI/cai-cybersecurity-agent.md
+  - About: about.md
+
+not_in_nav: |
+  Logging/loki.md
+  AgenticAI/kagent.md
+  AgenticAI/agent-gateway.md
+  assets/keycloak-kong.md
+
 theme:
   name: material
-  logo: assets/images/logo.png
-  favicon: assets/favicon.png
-  repo_url: https://github.com/umesh-khatiwada/DevOpsDocs
-  repo_name: GitHub
-  edit_uri: edit/main/docs/
+  custom_dir: overrides
+  favicon: assets/logo.png
+  language: en
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.top
     - navigation.tracking
-    - navigation.expand
+    - navigation.footer
+    - navigation.instant
     - search.suggest
     - search.highlight
     - content.code.copy
     - content.code.annotate
     - content.tooltips
+    - content.action.edit
     - toc.follow
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: blue
-      accent: lime
+      primary: custom
+      accent: custom
       toggle:
-        icon: material/weather-sunny
+        icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue
-      accent: purple
+      primary: custom
+      accent: custom
       toggle:
-        icon: material/weather-night
+        icon: material/weather-sunny
         name: Switch to light mode
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: DM Sans
+    code: JetBrains Mono
   icon:
-    logo: material/book-open-page-variant
-  extra_css:
-    - assets/stylesheets/custom.css
-  extra_javascript:
-    - assets/javascripts/custom.js
-    - https://unpkg.com/mermaid@9/dist/mermaid.min.js
-  language: en
+    repo: fontawesome/brands/github
+    edit: material/pencil-outline
 
-# Customization
+extra_css:
+  - assets/stylesheets/custom.css
+
 extra:
+  homepage: https://blog.umeshkhatiwada.com.np
   social:
+    - icon: fontawesome/solid/house
+      link: https://umeshkhatiwada.com.np
+      name: Portfolio
     - icon: fontawesome/brands/github
       link: https://github.com/umesh-khatiwada
+      name: GitHub
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/umesh-khatiwada/
-  # Social preview/meta for sharing
-  social_image: assets/images/social-preview.png
-  description: "DevOps guides, tutorials, and secure practices for production systems."
-  copyright: "© 2025 Umesh Khatiwada"
+      name: LinkedIn
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@contact.khatiwada
+      name: Medium
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/The_khatiwada
+      name: X
+  generator: false
 
-# HTML meta tags and open graph (Material uses extra to inject into templates)
-extra_templates:
-  - overrides/partials/extra-meta.html
-
-# Extensions
 markdown_extensions:
+  - abbr
   - admonition
-  - codehilite
+  - attr_list
+  - def_list
   - footnotes
+  - md_in_html
   - meta
+  - tables
   - toc:
       permalink: true
   - pymdownx.arithmatex
@@ -120,23 +122,38 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
+  - pymdownx.keys
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.tabbed
   - pymdownx.tilde
 
-# Plugins
 plugins:
   - search
   - minify:
       minify_html: true
-  - redirects
+  - redirects:
+      redirect_maps:
+        assets/Docker-Image-Security.md: Platform/docker-image-security.md
+        assets/keda.md: Platform/keda.md
   - awesome-pages
-  - git-revision-date-localized
+  - git-revision-date-localized:
+      fallback_to_build_date: true
   - rss
-  - macros

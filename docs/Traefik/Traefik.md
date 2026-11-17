@@ -1,5 +1,6 @@
+# Traefik
 
-### Introduction
+## Introduction
 Traefik is based on the concept of EntryPoints, Routers, Middlewares and Services.
 
 The main features include dynamic configuration, automatic service discovery, and support for multiple backends and protocols.
