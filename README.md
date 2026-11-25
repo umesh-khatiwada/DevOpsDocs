@@ -19,12 +19,10 @@ Source files live under `docs/`. The site navigation (`mkdocs.yml`) groups them 
 | Section | Guide |
 |---------|-------|
 | Monitoring | [Prometheus & Grafana](docs/Monitoring/1.%20setup_prometheus-grafana.md), [Google Chat alerts](docs/Monitoring/2.%20gmail_integration.md), [Slack alerts](docs/Monitoring/3.%20slack_integration.md) |
-| Logging | [Kafka](docs/Logging/kafka.md) |
-| Security | [Kubescape](docs/Security/KubeScape.md), [M9Sweeper](docs/Security/M9Sweeper.md), [Signed images (Kaniko, Cosign, Kyverno)](docs/Platform/docker-image-security.md) |
+| Logging | [Kafka](docs/Logging/kafka.md), [Loki](docs/Logging/loki.md) |
+| Security | [Kubescape](docs/Security/KubeScape.md), [M9Sweeper](docs/Security/M9Sweeper.md), [Signed images (Kaniko, Cosign, Kyverno)](docs/Platform/docker-image-security.md), [Keycloak + Kong JWT auth](docs/Security/keycloak-kong.md) |
 | Platform | [KEDA autoscaling](docs/Platform/keda.md), [Traefik](docs/Traefik/Traefik.md), [Karmada multi-cluster](docs/MultiCluster/Karmada.md), [Kasten backup & restore](docs/Backup&Restore/kasten.md), [Expired Contour certs fix](docs/Troubleshoots/How%20to%20rotate%20and%20renew%20expired%20Contou.md) |
-| Agentic AI | [Agentic AI](docs/AgenticAI/agentic-ai.md), [Introduction to MCP](docs/AgenticAI/introduction-to-mcp.md), [CAI cybersecurity agent](docs/AgenticAI/cai-cybersecurity-agent.md) |
-
-Present in `docs/` but not in the nav: `Logging/loki.md`, `AgenticAI/kagent.md` (listed under `not_in_nav`), plus `AgenticAI/agent-gateway.md` and `assets/keycloak-kong.md`.
+| Agentic AI | [Agentic AI](docs/AgenticAI/agentic-ai.md), [Introduction to MCP](docs/AgenticAI/introduction-to-mcp.md), [KAgent](docs/AgenticAI/kagent.md), [Agent Gateway](docs/AgenticAI/agent-gateway.md), [CAI cybersecurity agent](docs/AgenticAI/cai-cybersecurity-agent.md) |
 
 ## Repository structure
 
@@ -93,7 +91,7 @@ Present in `docs/` but not in the nav: `Logging/loki.md`, `AgenticAI/kagent.md` 
 
 ## Notes & Troubleshooting
 
-- The repository contains example images and some docs under `docs/assets/` that may not be listed in the site navigation (`mkdocs.yml`). Add them to the `nav` section if you want them visible in the site menu.
+- Every guide under `docs/` is listed in the `nav` section of `mkdocs.yml`. When you add a new page, add it there too, or it won't appear in the site menu. `docs/assets/` holds only images, CSS and the logo.
 - If MkDocs reports missing images or unrecognized relative links, check that image paths under `docs/` point to existing files in `docs/assets/images/` (or correct the references).
 - The project uses `mkdocs-material` theme; refer to `mkdocs.yml` for theme and plugin configuration.
 

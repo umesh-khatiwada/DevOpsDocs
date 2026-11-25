@@ -19,10 +19,12 @@ nav:
     - Slack alerts: Monitoring/3. slack_integration.md
   - Logging:
     - Kafka: Logging/kafka.md
+    - Loki: Logging/loki.md
   - Security:
     - Kubescape: Security/KubeScape.md
     - M9Sweeper: Security/M9Sweeper.md
     - Signed images (Kaniko, Cosign, Kyverno): Platform/docker-image-security.md
+    - Keycloak + Kong JWT auth: Security/keycloak-kong.md
   - Platform:
     - KEDA autoscaling: Platform/keda.md
     - Traefik: Traefik/Traefik.md
@@ -32,14 +34,10 @@ nav:
   - Agentic AI:
     - Agentic AI: AgenticAI/agentic-ai.md
     - Introduction to MCP: AgenticAI/introduction-to-mcp.md
+    - KAgent: AgenticAI/kagent.md
+    - Agent Gateway: AgenticAI/agent-gateway.md
     - CAI cybersecurity agent: AgenticAI/cai-cybersecurity-agent.md
   - About: about.md
-
-not_in_nav: |
-  Logging/loki.md
-  AgenticAI/kagent.md
-  AgenticAI/agent-gateway.md
-  assets/keycloak-kong.md
 
 theme:
   name: material
@@ -153,6 +151,7 @@ plugins:
       redirect_maps:
         assets/Docker-Image-Security.md: Platform/docker-image-security.md
         assets/keda.md: Platform/keda.md
+        assets/keycloak-kong.md: Security/keycloak-kong.md
   - awesome-pages
   - git-revision-date-localized:
       fallback_to_build_date: true
