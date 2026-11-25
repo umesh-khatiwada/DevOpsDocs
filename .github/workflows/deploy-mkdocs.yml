@@ -41,6 +41,9 @@ jobs:
           pip install -r requirements.txt
 
       - name: Build MkDocs site
+        env:
+          # Silence the plugin-printed "MkDocs 2" advisory banner. The build is unaffected.
+          DISABLE_MKDOCS_2_WARNING: "true"
         run: |
           mkdocs build --clean
 
