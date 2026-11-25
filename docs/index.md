@@ -41,9 +41,9 @@ Prometheus and Grafana on Kubernetes, with Alertmanager routing to Google Chat a
 
 ### [Logging](Logging/kafka.md)
 
-Event streaming with Apache Kafka: brokers, topics and getting logs flowing.
+Event streaming with Apache Kafka, and searchable Kubernetes logs with Grafana Loki and Alloy.
 
-<span class="uk-tags">Kafka · Streaming</span>
+<span class="uk-tags">Kafka · Loki · Alloy</span>
 </div>
 
 <div class="uk-card" markdown>
@@ -51,9 +51,9 @@ Event streaming with Apache Kafka: brokers, topics and getting logs flowing.
 
 ### [Security](Security/KubeScape.md)
 
-Scan clusters for misconfigurations, then sign and verify every image before it runs.
+Scan clusters for misconfigurations, sign and verify every image, and protect APIs with Keycloak JWTs at the Kong gateway.
 
-<span class="uk-tags">Kubescape · M9Sweeper · Cosign · Kyverno</span>
+<span class="uk-tags">Kubescape · Cosign · Kyverno · Keycloak · Kong</span>
 </div>
 
 <div class="uk-card" markdown>
@@ -81,9 +81,9 @@ Spread workloads across clusters with Karmada and back them up with Kasten K10.
 
 ### [Agentic AI](AgenticAI/agentic-ai.md)
 
-AI agents that work alongside ops: the Model Context Protocol, and security agents.
+AI agents that work alongside ops: the Model Context Protocol, Kubernetes-native agents, an agent gateway and security agents.
 
-<span class="uk-tags">MCP · AI agents · CAI</span>
+<span class="uk-tags">MCP · kagent · agentgateway · CAI</span>
 </div>
 
 </div>
