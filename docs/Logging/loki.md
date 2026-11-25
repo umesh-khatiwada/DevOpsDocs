@@ -29,11 +29,11 @@ description: Centralised Kubernetes logging with Grafana Loki. Covers the archit
 ```mermaid
 flowchart LR
   subgraph Node[Each Kubernetes node]
-    P1[Pods] --> F[/var/log/pods/]
+    P1[Pods] --> F["/var/log/pods/"]
   end
   A[Grafana Alloy<br/>DaemonSet] -->|discover + label| P1
-  A -->|push /loki/api/v1/push| D[Loki<br/>distributor → ingester]
-  D --> S[(Object storage<br/>chunks + TSDB index)]
+  A -->|push /loki/api/v1/push| D["Loki<br/>distributor → ingester"]
+  D --> S[("Object storage<br/>chunks + TSDB index")]
   G[Grafana] -->|LogQL| Q[Loki querier]
   Q --> S
   R[Loki ruler] -->|alerts| AM[Alertmanager]

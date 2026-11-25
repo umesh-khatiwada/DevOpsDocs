@@ -27,7 +27,7 @@ flowchart LR
     A2[kagent agents]
     A3[Custom agents]
   end
-  A1 & A2 & A3 --> GW[agentgateway<br/>authn · authz · rate limit · OTel]
+  A1 & A2 & A3 --> GW["agentgateway<br/>authn · authz · rate limit · OTel"]
   GW --> M1[MCP: Kubernetes]
   GW --> M2[MCP: GitHub]
   GW --> M3[MCP: stdio tool]
