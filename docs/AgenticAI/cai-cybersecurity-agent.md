@@ -25,13 +25,13 @@ CAI is **not** plain MIT. Its LICENSE file mixes MIT-licensed code (derived from
 ```mermaid
 flowchart LR
   U[Operator] --> CLI[cai CLI]
-  CLI --> O[Orchestrator / selected agent]
+  CLI --> O["Orchestrator / selected agent"]
   O -->|handoff| R[Red-team agent]
   O -->|handoff| B[Other specialist agents]
-  R --> T[Tools: shell, nmap, curl, code exec...]
+  R --> T["Tools: shell, nmap, curl, code exec..."]
   T --> L[(Lab target)]
   O --> LLM[LLM via LiteLLM]
-  O --> G[Guardrails · price limit · turn limit]
+  O --> G["Guardrails · price limit · turn limit"]
 ```
 
 - **Agents.** Specialists with their own prompts and tools. The default is an `orchestration_agent` that hands work to the others, such as `redteam_agent`. Run `/agent` inside CAI to list what your version ships.

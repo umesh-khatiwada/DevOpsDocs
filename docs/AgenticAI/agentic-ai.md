@@ -25,12 +25,12 @@ Almost every agent framework, from a 50-line script to [kagent](kagent.md), runs
 
 ```mermaid
 flowchart LR
-  G[Goal] --> P[Plan: LLM decides next step]
-  P --> A[Act: call a tool]
-  A --> O[Observe: read the tool result]
-  O --> M[(Memory / context)]
+  G[Goal] --> P["Plan: LLM decides next step"]
+  P --> A["Act: call a tool"]
+  A --> O["Observe: read the tool result"]
+  O --> M[("Memory / context")]
   M --> P
-  P -->|goal met| R[Answer / report]
+  P -->|goal met| R["Answer / report"]
 ```
 
 1. **Plan.** The model reads the goal, the conversation so far and the list of tools it may use, then picks the next step.
